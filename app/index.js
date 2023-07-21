@@ -6,6 +6,7 @@ import { Stack, useRouter } from "expo-router";
 
 import { COLORS, icons, images } from "../constants";
 import { ScreenHeaderBtn, Welcome } from "../components";
+import PopularWords from "../components/home/popular/PopularWords";
 
 const Home = () => {
   const router = useRouter();
@@ -32,6 +33,8 @@ const Home = () => {
         <View style={{ flex: 1, padding: 10 }}>
           <Welcome />
         </View>
+
+        <PopularWords />
       </ScrollView>
     </SafeAreaView>
   );
