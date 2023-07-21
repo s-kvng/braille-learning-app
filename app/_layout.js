@@ -14,6 +14,7 @@ export default function Layout() {
     DMRegular: require("../assets/fonts/DMSans-Regular.ttf"),
   });
 
+  //waits and loads the font
   const onLayoutRootView = useCallback(async () => {
     if (fontsloaded) {
       await SplashScreen.hideAsync();
