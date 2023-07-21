@@ -7,13 +7,14 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   userName: {
-    fontFamily: FONT.regular,
-    fontSize: SIZES.large,
+    fontFamily: FONT.medium,
+    fontSize: SIZES.xxxLarge,
     color: COLORS.secondary,
+    marginTop: 2,
   },
   welcomeMessage: {
     fontFamily: FONT.bold,
-    fontSize: SIZES.xLarge,
+    fontSize: SIZES.xxLarge,
     color: COLORS.primary,
     marginTop: 2,
   },
