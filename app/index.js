@@ -15,16 +15,12 @@ const Home = () => {
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
       <Stack.Screen
         options={{
-          headerStyle: { backgroundColor: COLORS.lightWhite },
+          headerStyle: {
+            backgroundColor: COLORS.lightWhite,
+          },
           headerShadowVisible: false,
           headerLeft: () => (
-            <ScreenHeaderBtn inconUrl={icons.menu} dimension="60%" />
-          ),
-          headerRight: () => (
-            <ScreenHeaderBtn
-              inconUrl={"../assets/images/kemal.jpg"}
-              dimension="60%"
-            />
+            <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
           ),
           headerTitle: "",
         }}
