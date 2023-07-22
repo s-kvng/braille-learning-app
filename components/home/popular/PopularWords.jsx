@@ -1,4 +1,5 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
+
 import {
   View,
   Text,
@@ -17,6 +18,8 @@ import { popularWords } from "../../../constants";
 
 const PopularWords = () => {
   const router = useRouter();
+  const [selectedWord, setSelectedWord] = useState("");
+
   const isLoading = false;
   const error = false;
 
@@ -37,7 +40,13 @@ const PopularWords = () => {
         ) : (
           <FlatList
             data={popularWords}
-            renderItem={({ item }) => <PopularWordCard item={item} />}
+            renderItem={({ item }) => (
+              <PopularWordCard
+                item={item}
+                selectedWord={selectedWord}
+                setSelectedWord={setSelectedWord}
+              />
+            )}
             keyExtractor={(item) => item?.word_id}
             contentContainerStyle={{ columnGap: SIZES.medium }}
             horizontal

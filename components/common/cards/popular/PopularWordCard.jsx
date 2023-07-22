@@ -1,13 +1,16 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 
 import styles from "./popularwordcard.style";
 
-const PopularWordCard = ({ item }) => {
+const PopularWordCard = ({ item, selectedWord, setSelectedWord }) => {
   return (
-    <View>
-      <Text>{item.word}</Text>
-    </View>
+    <TouchableOpacity
+      style={styles.container(selectedWord, item)}
+      onPress={() => setSelectedWord(item.word_id)}
+    >
+      <Text style={styles.brailleText}>{item.word}</Text>
+    </TouchableOpacity>
   );
 };
 
