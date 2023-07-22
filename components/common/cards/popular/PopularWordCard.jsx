@@ -3,10 +3,10 @@ import { View, Text } from "react-native";
 
 import styles from "./popularwordcard.style";
 
-const PopularWordCard = () => {
+const PopularWordCard = ({ item }) => {
   return (
     <View>
-      <Text>PopularJobCard</Text>
+      <Text>{item.word}</Text>
     </View>
   );
 };

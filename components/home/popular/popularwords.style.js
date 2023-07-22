@@ -17,6 +17,11 @@ const styles = StyleSheet.create({
     fontFamily: FONT.medium,
     color: COLORS.primary,
   },
+  headerword: {
+    fontSize: SIZES.yLarge,
+    fontFamily: FONT.bold,
+    color: COLORS.primary,
+  },
   headerBtn: {
     fontSize: SIZES.medium,
     fontFamily: FONT.medium,

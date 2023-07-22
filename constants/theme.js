@@ -24,6 +24,7 @@ const SIZES = {
   xLarge: 24,
   xxLarge: 32,
   xxxLarge: 36,
+  yLarge: 72,
 };
 
 const SHADOWS = {

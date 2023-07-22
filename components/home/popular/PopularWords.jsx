@@ -13,6 +13,7 @@ import styles from "./popularwords.style";
 import { SIZES, COLOR, COLORS } from "../../../constants";
 
 import PopularWordCard from "../../common/cards/popular/PopularWordCard";
+import { popularWords } from "../../../constants";
 
 const PopularWords = () => {
   const router = useRouter();
@@ -35,7 +36,7 @@ const PopularWords = () => {
           <Text>Someting went wrong</Text>
         ) : (
           <FlatList
-            data={[1, 2, 3, 4, 5, 6, 7]}
+            data={popularWords}
             renderItem={({ item }) => <PopularWordCard item={item} />}
             keyExtractor={(item) => item?.word_id}
             contentContainerStyle={{ columnGap: SIZES.medium }}
@@ -43,7 +44,7 @@ const PopularWords = () => {
           />
         )}
       </View>
-      <Text>Popular words</Text>
+      <Text style={styles.headerword}>⠓⠑⠇⠇⠕. </Text>
     </View>
   );
 };
