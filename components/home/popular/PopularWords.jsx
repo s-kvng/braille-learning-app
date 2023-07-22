@@ -12,6 +12,8 @@ import { useRouter } from "expo-router";
 import styles from "./popularwords.style";
 import { SIZES, COLOR, COLORS } from "../../../constants";
 
+import PopularWordCard from "../../common/cards/popular/PopularWordCard";
+
 const PopularWords = () => {
   const router = useRouter();
   const isLoading = false;
@@ -34,7 +36,10 @@ const PopularWords = () => {
         ) : (
           <FlatList
             data={[1, 2, 3, 4, 5, 6, 7]}
-            renderItem={({ item }) => <Text>{item}</Text>}
+            renderItem={({ item }) => <PopularWordCard item={item} />}
+            keyExtractor={(item) => item?.word_id}
+            contentContainerStyle={{ columnGap: SIZES.medium }}
+            horizontal
           />
         )}
       </View>
