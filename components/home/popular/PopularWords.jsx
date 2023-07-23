@@ -60,7 +60,6 @@ const PopularWords = () => {
           />
         )}
       </View>
-      <Text style={styles.headerword}>⠓⠑⠇⠇⠕. </Text>
     </View>
   );
 };
