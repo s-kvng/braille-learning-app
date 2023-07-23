@@ -1,0 +1,12 @@
+ useEffect(() => {
+    Tts.setDefaultLanguage("en-US"); // Set the language (optional)
+    Tts.addEventListener("tts-finish", handleTTSFinish); // Event listener for TTS finish
+    return () => {
+      Tts.removeEventListener("tts-finish", handleTTSFinish); // Clean up event listener
+    };
+  }, []);
+
+  const handleCellPress = (word, translation) => {
+    setSelectedWord(word);
+    Tts.speak(`${word}, ${translation}`);
+  };

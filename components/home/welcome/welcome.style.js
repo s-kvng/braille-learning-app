@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   },
   searchWrapper: {
     flex: 1,
-    backgroundColor: COLORS.white,
+    backgroundColor: COLORS.primary,
     marginRight: SIZES.small,
     justifyContent: "center",
     alignItems: "center",
@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     paddingHorizontal: SIZES.medium,
+    color: COLORS.white,
   },
   searchBtn: {
     width: 50,
