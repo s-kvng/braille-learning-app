@@ -3,13 +3,16 @@ import { View, Text, TouchableOpacity } from "react-native";
 
 import styles from "./popularwordcard.style";
 
-const PopularWordCard = ({ item, selectedWord, setSelectedWord }) => {
+const PopularWordCard = ({ item, selectedWord, setSelectedWord, speak }) => {
   return (
     <TouchableOpacity
       style={styles.container(selectedWord, item)}
-      onPress={() => setSelectedWord(item.word_id)}
+      onPress={() => {
+        setSelectedWord(item.word_id);
+        speak(item.word, item.translation);
+      }}
     >
-      <Text style={styles.brailleText}>{item.word}</Text>
+      <Text style={styles.brailleText(selectedWord, item)}>{item.word}</Text>
     </TouchableOpacity>
   );
 };

@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-
+import * as Speech from "expo-speech";
 import {
   View,
   Text,
@@ -20,6 +20,12 @@ const PopularWords = () => {
   const router = useRouter();
   const [selectedWord, setSelectedWord] = useState("");
 
+  const speak = (word, translation) => {
+    const thingToSay = "show more";
+    // Speech.speak(word);
+    Speech.speak(translation);
+  };
+
   const isLoading = false;
   const error = false;
 
@@ -27,7 +33,7 @@ const PopularWords = () => {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Popular words</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={speak}>
           <Text style={styles.headerBtn}>Show more</Text>
         </TouchableOpacity>
       </View>
@@ -45,6 +51,7 @@ const PopularWords = () => {
                 item={item}
                 selectedWord={selectedWord}
                 setSelectedWord={setSelectedWord}
+                speak={speak}
               />
             )}
             keyExtractor={(item) => item?.word_id}

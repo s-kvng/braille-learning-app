@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     display: "flex",
     width: 200,
     padding: SIZES.large,
-    backgroundColor: selectedWord === item.word_id ? COLORS.primary : "#FFF",
+    backgroundColor: selectedWord === item.word_id ? "#FFF" : COLORS.primary,
     borderRadius: SIZES.medium,
     justifyContent: "center",
     ...SHADOWS.medium,
@@ -21,11 +21,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   }),
-  brailleText: {
+  brailleText: (selectedword, item) => ({
     fontSize: SIZES.xxxxLarge,
     display: "flex",
     alignSelf: "center",
-  },
+    color: selectedword === item.word_id ? COLORS.primary : "#FFF",
+  }),
 
   logoImage: {
     width: "70%",
