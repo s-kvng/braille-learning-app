@@ -1,6 +1,12 @@
 import { React, useState } from "react";
 import * as Speech from "expo-speech";
-import { View, Text, TouchableOpacity, ActivityIndicator } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  ActivityIndicator,
+  FlatList,
+} from "react-native";
 
 import { useRouter } from "expo-router";
 
@@ -10,10 +16,11 @@ import { SIZES, COLOR, COLORS } from "../../../constants";
 import LetterCard from "../../common/cards/letter/LetterCard";
 import { alphabetBrailleCells } from "../../../constants";
 
-const PopularWords = () => {
+const Letters = () => {
   const router = useRouter();
   const [selectedWord, setSelectedWord] = useState("");
 
+  //
   const speak = (word, translation) => {
     const thingToSay = "show more";
     // Speech.speak(word);
@@ -38,11 +45,27 @@ const PopularWords = () => {
         ) : error ? (
           <Text>Someting went wrong</Text>
         ) : (
-          alphabetBrailleCells?.map((cell) => <LetterCard />)
+          <FlatList
+            data={alphabetBrailleCells}
+            renderItem={({ item }) => (
+              <LetterCard
+                item={item}
+                selectedWord={selectedWord}
+                setSelectedWord={setSelectedWord}
+              />
+            )}
+            keyExtractor={(item) => item?.braille_name}
+            contentContainerStyle={{
+              backgroundColor: "red",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            numColumns={2}
+          />
         )}
       </View>
     </View>
   );
 };
 
-export default PopularWords;
+export default Letters;

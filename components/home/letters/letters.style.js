@@ -7,6 +7,10 @@ const styles = StyleSheet.create({
     marginTop: SIZES.xLarge,
     paddingHorizontal: SIZES.small,
   },
+  listContent: {
+    justifyContent: "space-between",
+  },
+
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
