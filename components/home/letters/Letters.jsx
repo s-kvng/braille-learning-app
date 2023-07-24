@@ -22,8 +22,8 @@ const Letters = () => {
 
   //
   const speak = (word, translation) => {
-    const thingToSay = "show more";
-    // Speech.speak(word);
+    Speech.speak(word);
+    Speech.speak("translation ");
     Speech.speak(translation);
   };
 
@@ -52,11 +52,11 @@ const Letters = () => {
                 item={item}
                 selectedWord={selectedWord}
                 setSelectedWord={setSelectedWord}
+                speak={speak}
               />
             )}
             keyExtractor={(item) => item?.braille_name}
             contentContainerStyle={{
-              backgroundColor: "red",
               alignItems: "center",
               justifyContent: "center",
             }}

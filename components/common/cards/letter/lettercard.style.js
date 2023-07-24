@@ -17,7 +17,7 @@ import { COLORS, FONT, SHADOWS, SIZES } from "../../../../constants";
 const styles = StyleSheet.create({
   container: (selectedWord, item) => ({
     paddingHorizontal: 8,
-    paddingVertical: 10,
+    paddingVertical: 35,
 
     borderRadius: SIZES.medium,
     backgroundColor: selectedWord === item.braille_id ? "#FFF" : COLORS.primary,
@@ -36,10 +36,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
   }),
   brailleText: (selectedword, item) => ({
-    fontSize: SIZES.xxxxLarge,
+    fontSize: SIZES.yLarge,
     textAlign: "center",
-    backgroundColor: "green",
-    paddingVertical: 0,
+    height: 45,
     color: selectedword === item.braille_id ? COLORS.primary : "#FFF",
   }),
 
