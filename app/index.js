@@ -29,7 +29,6 @@ const Home = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{ flex: 1, padding: 10 }}>
           <Welcome />
-
           <PopularWords />
           <Letters />
         </View>
