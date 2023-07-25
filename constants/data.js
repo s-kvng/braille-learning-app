@@ -70,4 +70,27 @@ const popularWords = [
   },
 ];
 
-export { alphabetBrailleCells, popularWords };
+const numberBrailleCells = [
+  { name: "⠼⠁", braille_name: "Cell 1", translation: "1", braille_id: "1" },
+  { name: "⠼⠃", braille_name: "Cell 2", translation: "2", braille_id: "2" },
+  { name: "⠼⠉", braille_name: "Cell 3", translation: "3", braille_id: "3" },
+  { name: "⠼⠙", braille_name: "Cell 4", translation: "4", braille_id: "4" },
+  { name: "⠼⠑", braille_name: "Cell 5", translation: "5", braille_id: "5" },
+  { name: "⠼⠋", braille_name: "Cell 6", translation: "6", braille_id: "6" },
+  { name: "⠼⠛", braille_name: "Cell 7", translation: "7", braille_id: "7" },
+  { name: "⠼⠓", braille_name: "Cell 8", translation: "8", braille_id: "8" },
+  { name: "⠼⠊", braille_name: "Cell 9", translation: "9", braille_id: "9" },
+  { name: "⠼⠚", braille_name: "Cell 10", translation: "10", braille_id: "10" },
+  { name: "⠼⠅", braille_name: "Cell 11", translation: "11", braille_id: "11" },
+  { name: "⠼⠇", braille_name: "Cell 12", translation: "12", braille_id: "12" },
+  { name: "⠼⠍", braille_name: "Cell 13", translation: "13", braille_id: "13" },
+  { name: "⠼⠝", braille_name: "Cell 14", translation: "14", braille_id: "14" },
+  { name: "⠼⠕", braille_name: "Cell 15", translation: "15", braille_id: "15" },
+  { name: "⠼⠏", braille_name: "Cell 16", translation: "16", braille_id: "16" },
+  { name: "⠼⠟", braille_name: "Cell 17", translation: "17", braille_id: "17" },
+  { name: "⠼⠗", braille_name: "Cell 18", translation: "18", braille_id: "18" },
+  { name: "⠼⠎", braille_name: "Cell 19", translation: "19", braille_id: "19" },
+  { name: "⠼⠞", braille_name: "Cell 20", translation: "20", braille_id: "20" },
+];
+
+export { alphabetBrailleCells, popularWords, numberBrailleCells };
