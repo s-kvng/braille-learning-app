@@ -19,6 +19,8 @@ import { alphabetBrailleCells } from "../../../constants";
 const Letters = () => {
   const router = useRouter();
   const [selectedWord, setSelectedWord] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   //
   const speak = (word, translation) => {
@@ -27,14 +29,22 @@ const Letters = () => {
     Speech.speak(translation);
   };
 
-  const isLoading = false;
-  const error = false;
+  // Simulate loading data or error
+  // For your actual implementation, you can use useEffect to fetch the data
+  // and handle the loading/error states accordingly
+  const loadData = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      setError(false);
+    }, 2000);
+  };
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Alphabets</Text>
-        <TouchableOpacity onPress={speak}>
+        <TouchableOpacity onPress={loadData}>
           <Text style={styles.headerBtn}>Show more</Text>
         </TouchableOpacity>
       </View>
