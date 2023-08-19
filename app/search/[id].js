@@ -20,8 +20,6 @@ const JobSearch = () => {
   const router = useRouter();
   const [header, setHeader] = useState("");
 
-  console.log(params.id);
-
   //   useEffect(() => {
   //     params.id === "Numbers" && setHeader("Number");
   //   }, []);
