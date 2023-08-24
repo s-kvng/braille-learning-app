@@ -20,6 +20,23 @@ const styles = StyleSheet.create({
     color: COLORS.primary,
     marginTop: 2,
   },
+  name: {
+    fontFamily: FONT.regular,
+    fontSize: SIZES.large,
+    color: COLORS.primary,
+    marginTop: 2,
+  },
+  GroupContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+  },
+  GroupWrapper: {
+    backgroundColor: COLORS.gray2,
+    marginTop: SIZES.large,
+    padding: SIZES.medium,
+    borderRadius: 10,
+  },
   searchContainer: {
     justifyContent: "center",
     alignItems: "center",

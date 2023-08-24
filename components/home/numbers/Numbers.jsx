@@ -69,6 +69,7 @@ const Numbers = () => {
             contentContainerStyle={{
               alignItems: "center",
               justifyContent: "center",
+              paddingVertical: SIZES.medium,
             }}
             numColumns={2}
           />
