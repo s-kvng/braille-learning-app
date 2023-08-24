@@ -1,4 +1,10 @@
-import { View, Text, ScrollView, SafeAreaView } from "react-native";
+import {
+  View,
+  Text,
+  ScrollView,
+  SafeAreaView,
+  TouchableOpacity,
+} from "react-native";
 
 import { useState } from "react";
 
@@ -10,6 +16,7 @@ import PopularWords from "../components/home/popular/PopularWords";
 import Letters from "../components/home/letters/Letters";
 
 const Home = () => {
+  const item = "About";
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -22,7 +29,13 @@ const Home = () => {
           },
           headerShadowVisible: false,
           headerLeft: () => (
-            <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
+            <TouchableOpacity
+              onPress={() => {
+                router.push(`search/${item}`);
+              }}
+            >
+              <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
+            </TouchableOpacity>
           ),
           headerTitle: "",
         }}

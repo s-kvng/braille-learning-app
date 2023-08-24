@@ -12,8 +12,10 @@ import { Text, SafeAreaView } from "react-native";
 import { ScreenHeaderBtn, NearbyJobCard } from "../../components";
 import { COLORS, icons, SIZES } from "../../constants";
 import styles from "../../styles/search";
+
 import Letters from "../../components/home/letters/Letters";
 import Numbers from "../../components/home/numbers/Numbers";
+import About from "../../components/home/about/About";
 
 const JobSearch = () => {
   const params = useSearchParams();
@@ -44,6 +46,8 @@ const JobSearch = () => {
       {params.id === "Alphabet" && <Letters />}
 
       {params.id === "Numbers" && <Numbers />}
+
+      {params.id == "About" && <About />}
     </SafeAreaView>
   );
 };
