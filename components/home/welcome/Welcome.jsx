@@ -13,7 +13,7 @@ import styles from "./welcome.style";
 import { SIZES, icons } from "../../../constants";
 import { useRouter } from "expo-router";
 
-const typesOfText = ["Alphabet", "Numbers", "Symbols"];
+const typesOfText = ["Alphabet", "Numbers", "About"];
 
 const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   const router = useRouter();
