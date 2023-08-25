@@ -1,7 +1,7 @@
 import images from "./images";
 import icons from "./icons";
 import { COLORS, FONT, SIZES, SHADOWS } from "./theme";
-import { alphabetBrailleCells, popularWords } from "./data";
+import { alphabetBrailleCells, popularWords, numberBrailleCells } from "./data";
 
 export {
   images,
@@ -12,4 +12,5 @@ export {
   SHADOWS,
   alphabetBrailleCells,
   popularWords,
+  numberBrailleCells,
 };

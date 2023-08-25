@@ -11,10 +11,12 @@ import {
 import styles from "./welcome.style";
 
 import { SIZES, icons } from "../../../constants";
+import { useRouter } from "expo-router";
 
-const typesOfText = ["Alphabet", "Numbers", "Symbols"];
+const typesOfText = ["Alphabet", "Numbers", "About"];
 
-const Welcome = () => {
+const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
+  const router = useRouter();
   const [activeType, setActiveType] = useState("Alphabet");
 
   return (
@@ -24,23 +26,30 @@ const Welcome = () => {
         <Text style={styles.welcomeMessage}>Learn Braille 🧠</Text>
       </View>
 
-      <View style={styles.searchContainer}>
+      {/* <View style={styles.searchContainer}>
         <View style={styles.searchWrapper}>
           <TextInput
             style={styles.searchInput}
-            value=""
-            onChangeText={() => {}}
+            value={searchTerm}
+            onChangeText={(text) => {
+              setSearchTerm(text);
+            }}
             placeholder="Search for a cell"
           />
         </View>
-        <TouchableOpacity style={styles.searchBtn} onPress={() => {}}>
+        <TouchableOpacity
+          style={styles.searchBtn}
+          onPress={() => {
+            handleClick;
+          }}
+        >
           <Image
             source={icons.search}
             resizeMode="contain"
             style={styles.searchBtnImage}
           />
         </TouchableOpacity>
-      </View>
+      </View> */}
 
       <View style={styles.tabsContainer}>
         <FlatList

@@ -1,39 +1,49 @@
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 import * as Speech from "expo-speech";
 import {
   View,
   Text,
   TouchableOpacity,
-  FlatList,
   ActivityIndicator,
+  FlatList,
 } from "react-native";
 
 import { useRouter } from "expo-router";
 
-import styles from "./popularwords.style";
+import styles from "./letters.style";
 import { SIZES, COLOR, COLORS } from "../../../constants";
 
-import PopularWordCard from "../../common/cards/popular/PopularWordCard";
-import { popularWords } from "../../../constants";
+import LetterCard from "../../common/cards/letter/LetterCard";
+import { alphabetBrailleCells } from "../../../constants";
 
-const PopularWords = () => {
+const Letters = () => {
   const router = useRouter();
   const [selectedWord, setSelectedWord] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
 
+  //
   const speak = (word, translation) => {
-    const thingToSay = "show more";
-    // Speech.speak(word);
+    Speech.speak(word);
     Speech.speak(translation);
   };
 
-  const isLoading = false;
-  const error = false;
+  // Simulate loading data or error
+  // For your actual implementation, you can use useEffect to fetch the data
+  // and handle the loading/error states accordingly
+  const loadData = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      setError(false);
+    }, 2000);
+  };
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Popular words</Text>
-        <TouchableOpacity onPress={speak}>
+        <Text style={styles.headerTitle}>Alphabets</Text>
+        <TouchableOpacity onPress={loadData}>
           <Text style={styles.headerBtn}>Show more</Text>
         </TouchableOpacity>
       </View>
@@ -45,18 +55,21 @@ const PopularWords = () => {
           <Text>Someting went wrong</Text>
         ) : (
           <FlatList
-            data={popularWords}
+            data={alphabetBrailleCells}
             renderItem={({ item }) => (
-              <PopularWordCard
+              <LetterCard
                 item={item}
                 selectedWord={selectedWord}
                 setSelectedWord={setSelectedWord}
                 speak={speak}
               />
             )}
-            keyExtractor={(item) => item?.word_id}
-            contentContainerStyle={{ columnGap: SIZES.medium }}
-            horizontal
+            keyExtractor={(item) => item?.braille_name}
+            contentContainerStyle={{
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            numColumns={2}
           />
         )}
       </View>
@@ -64,4 +77,4 @@ const PopularWords = () => {
   );
 };
 
-export default PopularWords;
+export default Letters;

@@ -5,6 +5,14 @@
       "bundler": "metro"
     },
     "name": "braille-learning-app",
-    "slug": "braille-learning-app"
+    "slug": "braille-learning-app",
+    "extra": {
+      "eas": {
+        "projectId": "fe9844f1-09bb-4b4a-8920-c21ae94edad7"
+      }
+    },
+    "android": {
+      "package": "com.skvng.braillelearningapp"
+    }
   }
 }
