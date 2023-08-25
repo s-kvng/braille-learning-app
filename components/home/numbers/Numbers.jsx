@@ -25,7 +25,7 @@ const Numbers = () => {
   //
   const speak = (word, translation) => {
     Speech.speak(word);
-    Speech.speak("translation ");
+
     Speech.speak(translation);
   };
 

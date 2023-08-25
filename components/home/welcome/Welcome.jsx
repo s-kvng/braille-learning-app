@@ -26,7 +26,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
         <Text style={styles.welcomeMessage}>Learn Braille 🧠</Text>
       </View>
 
-      <View style={styles.searchContainer}>
+      {/* <View style={styles.searchContainer}>
         <View style={styles.searchWrapper}>
           <TextInput
             style={styles.searchInput}
@@ -49,7 +49,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
             style={styles.searchBtnImage}
           />
         </TouchableOpacity>
-      </View>
+      </View> */}
 
       <View style={styles.tabsContainer}>
         <FlatList

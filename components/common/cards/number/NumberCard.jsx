@@ -10,7 +10,7 @@ const NumberCard = ({ item, selectedWord, setSelectedWord, speak }) => {
       style={styles.container(selectedWord, item)}
       onPress={() => {
         setSelectedWord(item.braille_id);
-        speak(item.braille_name, item.translation);
+        speak(item.braille_name, item.braille_format);
       }}
     >
       <Text style={styles.brailleText(selectedWord, item)}>{item.name}</Text>

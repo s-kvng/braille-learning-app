@@ -12,7 +12,7 @@ import styles from "./about.style";
 
 const About = () => {
   return (
-    <View>
+    <View style={styles.mainWrapper}>
       <View style={styles.container}>
         <Text style={styles.AboutTitle}>About Brilliant brialle 🧠</Text>
       </View>
@@ -33,6 +33,13 @@ const About = () => {
             &#x1F393; Gariba Olawudeen - 202135475
           </Text>
           <Text style={styles.name}>&#x1F393; Abass Seidu - 202137089</Text>
+        </View>
+      </View>
+
+      <View style={styles.devContainer}>
+        <View style={styles.devWrapper}>
+          <Text style={styles.dev1}>Developed By s-kvng&#x1F576;</Text>
+          <Text style={styles.dev2}>kvngnathan8420@gmail.com &#x1F680;</Text>
         </View>
       </View>
     </View>

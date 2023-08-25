@@ -3,6 +3,9 @@ import { StyleSheet } from "react-native";
 import { COLORS, FONT, SIZES } from "../../../constants";
 
 const styles = StyleSheet.create({
+  mainWrapper: {
+    height: "100%",
+  },
   container: {
     width: "100%",
     marginTop: 15,
@@ -37,21 +40,31 @@ const styles = StyleSheet.create({
     padding: SIZES.medium,
     borderRadius: 10,
   },
-  searchContainer: {
+
+  devContainer: {
+    width: "100%",
+    position: "absolute",
+    bottom: 0,
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
-    marginTop: SIZES.large,
-    height: 50,
   },
-  searchWrapper: {
-    flex: 1,
+
+  devWrapper: {
     backgroundColor: COLORS.primary,
-    marginRight: SIZES.small,
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: SIZES.medium,
-    height: "100%",
+    padding: 15,
+
+    borderRadius: 10,
+  },
+
+  dev1: {
+    color: COLORS.white,
+    textAlign: "center",
+    fontSize: SIZES.medium,
+  },
+  dev2: {
+    color: COLORS.white,
+    fontSize: SIZES.medium,
   },
   searchInput: {
     fontFamily: FONT.regular,
